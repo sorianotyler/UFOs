@@ -11,15 +11,15 @@
   integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
   crossorigin="anonymous"
   />
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body class="bg-dark">
     <div class="wrapper">
-        <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.html">UFO Sightings</a>
         </nav>
         <div class="jumbotron">
-            <h1 class="display-4">The Truth is Out There</h1>
+            <h1>The Truth Is Out There</h1>
         </div>
         <div class="container-fluid">
             <div class="row">
@@ -41,29 +41,14 @@
                 <div class = "col-md-3">
                     <form>
                         <p>Filter Search</p>
-                        <ul>
-                          <li>
-                            <label for="date">Enter Date</label>
-                            <input type="text" placeholder="1/10/2010" id="datetime" />
-                          </li>
-                          <li>
-                            <label for="city">Enter City</label>
-                            <input type="text" placeholder="Rockwell" id="city" />
-                          </li>
-                          <li>
-                            <label for="state">Enter State</label>
-                            <input type="text" placeholder="ca" id="state" />
-                          </li>
-                          <li>
-                            <label for="country">Enter country</label>
-                            <input type="text" placeholder="us" id="country" />
-                          </li>
-                          <li>
-                            <label for="shape">Enter Shape</label>
-                            <input type="text" placeholder="circle" id="shape" />
-                          </li>
-                          
-                          
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <label for="date">Enter Date</label>
+                                <input type="text" placeholder="1/10/2010" id="datetime" /> 
+                            </li>
+                            <li class="list-group-item">
+                                <button id="filter-btn" type="button" class="btn btn-default">Filter Table</button>
+                            </li>
                         </ul>
                     </form>
                 </div>
@@ -90,6 +75,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
     <script src="js/data.js"></script>
     <script src="js/app.js"></script>
-    
 </body>
 </html>
