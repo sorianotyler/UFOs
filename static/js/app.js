@@ -31,14 +31,14 @@ function updateFilters() {
     
     // 4a. Save the element that was changed as a variable.
     let curr_element = d3.select(this);
-    console.log(curr_element);
+    //console.log(curr_element);
     // 4b. Save the value that was changed as a variable.
     let curr_value = curr_element.property("value");
-    console.log(curr_value);
+    //console.log(curr_value);
     // 4c. Save the id of the filter that was changed as a variable.
     //let filter_id = d3.select();
     let curr_id = curr_element.property("id");
-    console.log(curr_id);
+    //console.log(curr_id);
     // 5. If a filter value was entered then add that filterId and value
     // to the filters list. Otherwise, clear that filter from the filters object.
     if (curr_id === "datetime"){
@@ -69,7 +69,7 @@ function updateFilters() {
     } 
    
     
-    console.log(filters);
+    //console.log(filters);
     // 6. Call function to apply all filters and rebuild the table
     filterTable();
   
@@ -84,9 +84,9 @@ function updateFilters() {
     // 9. Loop through all of the filters and keep any data that
     // matches the filter values
     for (const filter in filters){
-      console.log(filters[filter][1]);
-      console.log(filters[filter][1] != "");
-      console.log(filters[filter][0]);
+      // console.log(filters[filter][1]);
+      // console.log(filters[filter][1] != "");
+      // console.log(filters[filter][0]);
       if (filters[filter][0] === "datetime" && filters[filter][1] != ""){
         filtered_data = filtered_data.filter(row => row.datetime === filters[filter][1]);
       } else if (filters[filter][0] === "city" &&  filters[filter][1] != ""){
